@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+  padding: 60px;
+}
+
+#mainbody {
+  background-color: yellow;
+  background-image: url(../src/assets/quotespine.jpg);
+  opacity: 0.8;
+}
