@@ -1,10 +1,24 @@
-# INTRODUCTION
+#PROJECT NAME:
+Pineapple Quotes!
 
-In our first week of Moringa Core, we were tasked with creating a Quotes website that allows the user to interact by adding their own quotes by their favourite author, as well as upvoting or downvoting the quotes already listed. The website is built using the Angular framework, and is styled using CSS and Bootstrap. Feel free to interact with the website, fork the project, edit some of the details and then submit a pull request if you make any improvements.
+#AUTHOR NAME:
+Melissa Malala
+
+#BRIEF AND LINK TO THE LIVE SITE ON GITHUB PAGES:
+To preview this app follow this link to the live & deployed website:
+<!-- ADD LINK HERE -->
+
+# PROJECT DESCRIPTION AND INTRODUCTION:
+
+In our first week of Moringa Core, we were tasked with creating a Quotes website that allows the user to interact by adding their own quotes by their favourite author, as well as upvoting or downvoting the quotes already listed. The website is built using the Angular framework, and is styled using CSS and Bootstrap.
+
+To make my project a little bit more interesting, I worked with a pineapple theme and customised the website to have quotes about pineapples. This would make completing the task a bit more exciting for me, as I love colour and all things sweet! Theming my site according to fruits also made it easier to theme the work so that the user experience is fun, e.g pineapple colours are yellow with summer tones, so I stuck to warm colours on CSS.
+
+Feel free to interact with the website, fork the project, edit some of the details and then submit a pull request if you make any improvements.
 Contact me on melissamalala@gmail.com if you have any questions!
 
 
-# Quotes
+# PROJECT SET UP INSTRUCTIONS OF PINEAPPLE QUOTES APP:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
@@ -33,6 +47,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## LICENSE:
+## COPYRIGHT AND LICENSE INFORMATION:
 
-Melissa Malala | 10 August 2018
+COPYRIGHT - Melissa Malala | 10 August 2018
