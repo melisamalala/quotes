@@ -34,4 +34,7 @@
 
 #votingquotecards {
   background-color: #ffd700;
+  text-align: center;
+  color: black;
+  font-family: 'Arapey', serif;
 }

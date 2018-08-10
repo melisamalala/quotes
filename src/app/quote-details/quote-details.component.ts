@@ -17,8 +17,8 @@ export class QuoteDetailsComponent {
   }
 
   constructor() { }
-
-  ngOnInit() {
-  }
+  //
+  // ngOnInit() {
+  // }
 
 }
