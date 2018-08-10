@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { QuotesformComponent } from './quotesform/quotesform.component';
+import { UiModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { QuotesformComponent } from './quotesform/quotesform.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

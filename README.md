@@ -4,7 +4,6 @@ In our first week of Moringa Core, we were tasked with creating a Quotes website
 Contact me on melissamalala@gmail.com if you have any questions!
 
 
-
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
