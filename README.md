@@ -10,7 +10,7 @@ To preview this app follow this link to the live & deployed website:
 
 # PROJECT DESCRIPTION AND INTRODUCTION:
 
-In our first week of Moringa Core, we were tasked with creating a Quotes website that allows the user to interact by adding their own quotes by their favourite author, as well as upvoting or downvoting the quotes already listed. The website is built using the Angular framework, and is styled using CSS and Bootstrap.
+In our first week of Moringa Core, we were tasked with creating a Quotes website that allows the user to interact by adding their own quotes by their favourite author, as well as upvoting or downvoting the quotes already listed depending on how terrible or inspirational the quotes are. The website is built using the Angular framework, and is styled using CSS and Bootstrap.
 
 To make my project a little bit more interesting, I worked with a pineapple theme and customised the website to have quotes about pineapples. This would make completing the task a bit more exciting for me, as I love colour and all things sweet! Theming my site according to fruits also made it easier to theme the work so that the user experience is fun, e.g pineapple colours are yellow with summer tones, so I stuck to warm colours on CSS.
 
