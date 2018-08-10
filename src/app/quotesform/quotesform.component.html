@@ -1,29 +1,42 @@
 <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
   <div class="form-group">
     <label for="enteryourname">Please Enter Your Name</label>
-    <input required minlength="3" maxlength="10" [(ngModel)]="newQuote.postedBy" name="postedBy" #postedBy="ngModel" (change)="log(firstName)" id="postedBy" type="text" class="form-control">
+    <input required minlength="3" maxlength="15" [(ngModel)]="newQuote.postedBy" name="postedBy" #postedBy="ngModel" (change)="log(firstName)" id="postedBy" type="text" class="form-control">
+  </div>
 
+  <div class="alert alert-danger" *ngIf="!postedBy.touched && !postedBy.valid">
 
-    <div class="alert alert-danger" *ngIf="!postedBy.touched && !postedBy.valid">
+    <div *ngIf="postedBy.errors.required">Full Name is required!</div>
+    <div *ngIf="postedBy.errors.minlength">Full Name is minimum {{postedBy.errors.minlength.requiredlength}} characters!</div>
 
-      <div *ngIf="postedBy.errors.required">Full Name is required!</div>
-      <div *ngIf="postedBy.errors.minlength">Full Name is minimum {{postedBy.errors.minlength.requiredlength}} characters!</div>
-
-    </div>
-
-
-    <label for="author">Name Of Author</label><input id="author" type="text" class="form-control">
-
-
+  </div>
+  <div [hidden]="postedBy.valid || postedBy.pristine" class="alert alert-danger form-group">
+    <p> The Username is Required</p>
   </div>
 
 
   <div class="form-group">
-    <label for="quotecomment">Enter Your Favourite Pineapple Quote</label>
-    <textarea ngModel name="quotecomment" id="quotecomment" cols="60" rows="10" class="form-control">
-    </textarea>
+    <label for="author">Name Of Author</label><input id="author" type="text" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required minlength="3" maxlength="15">
+
   </div>
-  <button class="btn btn-primary">Submit Your Quote So That Users Can Vote!</button>
+  <div class="alert alert-danger" *ngIf="!author.touched && !author.valid">
+
+    <div *ngIf="authors.errors.required">Full Name is required!</div>
+    <div *ngIf="authors.errors.minlength">Full Name is minimum {{authors.errors.minlength.requiredlength}} characters!</div>
+  </div>
+  <div [hidden]="author.valid ||author.pristine" class="alert alert-danger form-group">
+    <p> The Author is Required</p>
+  </div>
+
+  <div class="form-group">
+    <label for="quote">Enter Your Favourite Pineapple Quote</label>
+    <textarea [(ngModel)]="newQuote.quote" #quote="ngModel" name="quote" id="quote" type="text" cols="60" rows="10" class="form-control" required>
+    </textarea>
+    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger form-group">
+      <p> The Quote is Required</p>
+    </div>
+  </div>
+  <button type="Submit" class="btn btn-success btn-lg">Submit Your Quote So That Users Can Vote!</button>
 
 
 </form>
