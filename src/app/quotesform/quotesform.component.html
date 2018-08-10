@@ -1,7 +1,7 @@
 <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
   <div class="form-group">
     <label for="enteryourname">Please Enter Your Name</label>
-    <input required minlength="3" maxlength="15" [(ngModel)]="newQuote.postedBy" name="postedBy" #postedBy="ngModel" (change)="log(firstName)" id="postedBy" type="text" class="form-control">
+    <input required minlength="3" maxlength="15" name="postedBy" (change)="log(postedBy)" id="postedBy" type="text" class="form-control">
   </div>
 
   <div class="alert alert-danger" *ngIf="!postedBy.touched && !postedBy.valid">
@@ -16,7 +16,7 @@
 
 
   <div class="form-group">
-    <label for="author">Name Of Author</label><input id="author" type="text" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required minlength="3" maxlength="15">
+    <label for="author">Name Of Author</label><input id="author" type="text" class="form-control" name="author" required minlength="3" maxlength="15">
 
   </div>
   <div class="alert alert-danger" *ngIf="!author.touched && !author.valid">
@@ -30,7 +30,7 @@
 
   <div class="form-group">
     <label for="quote">Enter Your Favourite Pineapple Quote</label>
-    <textarea [(ngModel)]="newQuote.quote" #quote="ngModel" name="quote" id="quote" type="text" cols="60" rows="10" class="form-control" required>
+    <textarea name="quote" id="quote" type="text" cols="60" rows="10" class="form-control" required>
     </textarea>
     <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger form-group">
       <p> The Quote is Required</p>
