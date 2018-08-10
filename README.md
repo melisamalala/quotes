@@ -1,14 +1,14 @@
-#PROJECT NAME:
+## PROJECT NAME:
 Pineapple Quotes!
 
-#AUTHOR NAME:
+## AUTHOR NAME:
 Melissa Malala
 
-#BRIEF AND LINK TO THE LIVE SITE ON GITHUB PAGES:
+## BRIEF AND LINK TO THE LIVE SITE ON GITHUB PAGES:
 To preview this app follow this link to the live & deployed website:
 <!-- ADD LINK HERE -->
 
-# PROJECT DESCRIPTION AND INTRODUCTION:
+## PROJECT DESCRIPTION AND INTRODUCTION:
 
 In our first week of Moringa Core, we were tasked with creating a Quotes website that allows the user to interact by adding their own quotes by their favourite author, as well as upvoting or downvoting the quotes already listed depending on how terrible or inspirational the quotes are. The website is built using the Angular framework, and is styled using CSS and Bootstrap.
 
