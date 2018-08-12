@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent {
-  numberOfLikes: number = 0;
+  numberOfLikes = 0;
 
   likeButtonClick() {
     this.numberOfLikes++;

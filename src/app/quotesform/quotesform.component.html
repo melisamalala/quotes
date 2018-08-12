@@ -1,7 +1,7 @@
-<form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+<!-- <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
   <div class="form-group">
     <label for="enteryourname">Please Enter Your Name</label>
-    <input required minlength="3" maxlength="15" name="postedBy" (change)="log(postedBy)" id="postedBy" type="text" class="form-control">
+    <input required minlength="3" maxlength="15" [(ngModel)]="newQuote.postedBy" name="postedBy" #postedBy="ngModel" (change)="log(postedBy)" id="postedBy" type="text" class="form-control">
   </div>
 
   <div class="alert alert-danger" *ngIf="!postedBy.touched && !postedBy.valid">
@@ -16,7 +16,7 @@
 
 
   <div class="form-group">
-    <label for="author">Name Of Author</label><input id="author" type="text" class="form-control" name="author" required minlength="3" maxlength="15">
+    <label for="author">Name Of Author</label><input id="author" type="text" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required minlength="3" maxlength="15">
 
   </div>
   <div class="alert alert-danger" *ngIf="!author.touched && !author.valid">
@@ -30,13 +30,42 @@
 
   <div class="form-group">
     <label for="quote">Enter Your Favourite Pineapple Quote</label>
-    <textarea name="quote" id="quote" type="text" cols="60" rows="10" class="form-control" required>
+    <textarea [(ngModel)]="newQuote.quote" #quote="ngModel" name="quote" id="quote" type="text" cols="60" rows="10" class="form-control" required>
     </textarea>
     <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger form-group">
       <p> The Quote is Required</p>
     </div>
   </div>
-  <button type="Submit" class="btn btn-success btn-lg">Submit Your Quote So That Users Can Vote!</button>
+  <button type="Submit" (click)="addQuote" class="btn btn-success btn-lg">Submit Your Quote So That Users Can Vote!</button>
 
 
-</form>
+</form> -->
+
+
+
+<div class="write-quote-wrapper ">
+  <p>Enter Your Quote Here </p>
+  <!--The two way Data binding syntax is [()]
+   Input binding syntax is [].
+   Output binding syntax is ();
+  -->
+  <div class="container">
+    <form (ngSubmit)="submitQuote()" #goalForm="ngForm" class="form-row">
+      <div class="col-6">
+        <!--If ngModel is used within a form tag, either the name attribute must be set or the form
+      control must be defined as 'standalone' in ngModelOptions.
+      Example 1: <input [(ngModel)]="person.firstName" name="first">
+      Example 2: <input [(ngModel)]="person.firstName" [ngModelOptions]="{standalone: true}">
+      notice that the ids "#id" is used when when submiting the forms as the ids are referenced through the ngModel
+    at -->
+        <input id="quote" type="text" class="form-control" placeholder="quote" [(ngModel)]="inputQuote.quote" value={{inputQuote}} name="quote" #quote="ngModel" /> {{inputQuote.quote}}
+      </div>
+      <div class="col-4">
+        <input id="by" type="text" class="form-control" placeholder="by" [(ngModel)]="inputQuote.by" value="{{inputQuote}}" name="by" #by="ngModel" />
+      </div>
+      <div class="col-2">
+        <button type="button" (click)="addQuote" class="btn btn-outline-primary">Submit and Vote</button>
+      </div>
+    </form>
+  </div>
+</div>
