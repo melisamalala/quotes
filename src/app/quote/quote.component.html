@@ -1,28 +1,9 @@
 <h3>Vote On These Pineapple Quotes</h3>
 
-<div class="card-header">
-  <h3>Latest Quotes</h3>
+<div class="container-fluid " *ngFor="let quote of quotes;let i = index">
+
+  <blockquote class="blockquote">
+    <p id="{{i}}" class="text-left ml-2">{{qt.quotes}}</p>
+    <footer class="blockquote-footer text-left ml-3"><cite title="">{{qt.by}}</cite></footer>
+  </blockquote>
 </div>
-
-<!-- <div *ngFor='let quote of quotes;let i = index'>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-
-                <div class="card-body">
-                  <div class="card-title">
-                    <h5 id="{{i}}" appHighlight>"{{quote.quote}}"</h5>
-                  </div>
-                  <br>
-                  <div class="card-text">
-
-                    <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-details>
-
-                    <p>
-                      <a href="#" (click)='toogleDetails(i)'><small>See details here</small></a>
-                    </p>
-                  </div>
-                </div>
-                <hr>
-              </li>
-            </ul>
-          </div> -->
