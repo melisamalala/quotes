@@ -58,10 +58,10 @@
       Example 2: <input [(ngModel)]="person.firstName" [ngModelOptions]="{standalone: true}">
       notice that the ids "#id" is used when when submiting the forms as the ids are referenced through the ngModel
     at -->
-        <input id="quote" type="text" class="form-control" placeholder="quote" [(ngModel)]="inputQuote.quote" value={{inputQuote}} name="quote" #quote="ngModel" /> {{inputQuote.quote}}
+        <input id="quote" type="text" class="form-control" placeholder="quote" [(ngModel)]="inputQuote.quote" value={{inputQuote}} name="quote" #quote="ngModel"> {{inputQuote.quote}}
       </div>
       <div class="col-4">
-        <input id="by" type="text" class="form-control" placeholder="by" [(ngModel)]="inputQuote.by" value="{{inputQuote}}" name="by" #by="ngModel" />
+        <input id="by" type="text" class="form-control" placeholder="by" [(ngModel)]="inputQuote.by" value="{{inputQuote}}" name="by" #by="ngModel">
       </div>
       <div class="col-2">
         <button type="button" (click)="addQuote" class="btn btn-outline-primary">Submit and Vote</button>
